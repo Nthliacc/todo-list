@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { ListTasks } from './components/ListTasks';
 
-function App() {
+const Container = styled.main`
+  height: 100vh;
+  color: ${({ theme }) => theme.white};
+  background-color: ${({ theme }) => theme.black};
+`;
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <ListTasks/>
+    </Container>
   );
-}
-
-export default App;
+};

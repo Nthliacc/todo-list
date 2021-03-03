@@ -1,0 +1,1 @@
+export const initialValue = JSON.parse(localStorage.getItem("TODOTASKS"));
